@@ -19,7 +19,6 @@ module.exports = {
         .catch((error) => res.status(500).json (error)); 
     },
     
-    
     updateThought(req, res) {
         Thought.findOneAndUpdate(
             { _id: req.params.thoughtID }, 
