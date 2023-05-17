@@ -27,13 +27,13 @@ const randomUsername = () => `${randomArray(names)}${Math.floor(Math.random() * 
 function randomEmail (domain, length)
 { 
     let txt = ""; 
-    let options = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; 
+    let options = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; 
 
-        for(var i=0; i < length; i++) { 
-            txt += options.charAt(Math.floor(Math.random() * possible.length)); 
+        for(var i=0; i < length; i++) 
+            txt += options.charAt(Math.floor(Math.random() * options.length)); 
 
-            return txt + domain
-        }
+            return txt + domain; 
+        
 }
 
 const randomThought = () => `${randomArray(thoughts)}`; 

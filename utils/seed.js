@@ -13,7 +13,7 @@ connection.once('open', async () => {
         for(let index = 0; index < 10; index++){ 
 
             const username = randomUsername(); 
-            const email = randomEmail(); 
+            const email = randomEmail("@gmail.com", 8); 
             const genUser = { 
                 username: username, 
                 email: email, 
